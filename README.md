@@ -58,10 +58,7 @@ Luego un **coordinador** suma los gradientes parciales y actualiza los parámetr
 
 ## **1.3 Diagrama 1 — Arquitectura Concurrente (Componentes)**
 
-```
-<img width="1028" height="922" alt="DIAGRAMA 1 — Concurrencia (Arquitectura Componentes)" src="https://github.com/user-attachments/assets/2e98a775-aba6-4941-bd4f-08045fa04fde" />
-
-```
+<img width="1028" height="922" alt="DIAGRAMA 1 — Concurrencia (Arquitectura Componentes)" src="https://github.com/user-attachments/assets/99a77dce-3a32-4140-9dd6-c97e598c7db1" />
 
 ---
 
@@ -92,10 +89,8 @@ Luego un **coordinador** suma los gradientes parciales y actualiza los parámetr
 
 ## **1.5 Diagrama 2 — Concurrencia (Secuencia)**
 
-```
-<img width="1400" height="685" alt="DIAGRAMA 2 — Concurrencia (Secuencia)" src="https://github.com/user-attachments/assets/2746b64e-a0ee-477a-a20b-6bf2c362bdb4" />
+<img width="1400" height="685" alt="DIAGRAMA 2 — Concurrencia (Secuencia)" src="https://github.com/user-attachments/assets/e4a1ccff-7649-4bed-9da3-b53f74c1fbcf" />
 
-```
 
 ---
 
@@ -153,10 +148,8 @@ En AOP, estas funcionalidades se implementan mediante *Aspectos* que se “inyec
 
 ## **2.3 Diagrama 3 — AOP (Componentes)**
 
-```
-<img width="881" height="581" alt="DIAGRAMA 3 — AOP (Componentes)" src="https://github.com/user-attachments/assets/fc3f4157-5f4f-460a-adc1-79c5068b0994" />
+<img width="881" height="581" alt="DIAGRAMA 3 — AOP (Componentes)" src="https://github.com/user-attachments/assets/43a2c718-1452-452c-b094-a2bff959aa10" />
 
-```
 
 ---
 
@@ -181,10 +174,8 @@ En AOP, estas funcionalidades se implementan mediante *Aspectos* que se “inyec
 
 ## **2.5 Diagrama 4 — AOP (Secuencia)**
 
-```
-<img width="1047" height="553" alt="DIAGRAMA 4 — AOP (Secuencia)" src="https://github.com/user-attachments/assets/2366f21e-d9c5-4295-a0bd-ba83f503758c" />
+<img width="1047" height="553" alt="DIAGRAMA 4 — AOP (Secuencia)" src="https://github.com/user-attachments/assets/49943642-305f-4da2-a26c-82eeff0e74e4" />
 
-```
 
 ---
 
