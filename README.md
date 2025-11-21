@@ -3,7 +3,7 @@
 
 ---
 
-# 📌 **Objetivos del Parcial**
+# **Objetivos del Parcial**
 
 1. Diseñar una solución concurrente (sin implementación) para el cálculo de regresión lineal usando el paradigma de concurrencia y cálculo de PI como base conceptual.
 2. Diseñar una solución usando el paradigma de *Aspect-Oriented Programming* (AOP) que permita realizar regresión lineal sin mezclar la lógica principal con preocupaciones transversales.
@@ -13,7 +13,7 @@
 
 ---
 
-# ✨ Punto 1 — Diseño usando Concurrencia  
+# Punto 1 — Diseño usando Concurrencia  
 *(Diseño, no implementación)*
 
 La idea base se inspira en el cálculo concurrente de PI mediante división del problema en subtareas (workers).  
@@ -21,7 +21,7 @@ Aquí aplicamos ese mismo enfoque: **dividir el cálculo de los gradientes de la
 
 ---
 
-## 📌 **1.1 Diseño General**
+## **1.1 Diseño General**
 
 La regresión lineal por gradiente descendente requiere:
 - Calcular predicciones `y_pred`
@@ -37,7 +37,7 @@ Luego un **coordinador** suma los gradientes parciales y actualiza los parámetr
 
 ---
 
-## 📦 **1.2 Componentes del Diseño Concurrente**
+## **1.2 Componentes del Diseño Concurrente**
 
 - **Coordinator**  
   Orquesta el proceso, envía los subtareas a los workers, recolecta resultados y actualiza parámetros.
@@ -56,17 +56,16 @@ Luego un **coordinador** suma los gradientes parciales y actualiza los parámetr
 
 ---
 
-## 📊 **1.3 Diagrama 1 — Arquitectura Concurrente (Componentes)**
-
-👉 **Aquí debes pegar la imagen generada correspondiente al DIAGRAMA 1**
+## **1.3 Diagrama 1 — Arquitectura Concurrente (Componentes)**
 
 ```
-[PEGA AQUÍ LA IMAGEN DEL DIAGRAMA 1]
+<img width="1028" height="922" alt="DIAGRAMA 1 — Concurrencia (Arquitectura Componentes)" src="https://github.com/user-attachments/assets/2e98a775-aba6-4941-bd4f-08045fa04fde" />
+
 ```
 
 ---
 
-## 🧩 **1.4 Explicación del Diagrama**
+## **1.4 Explicación del Diagrama**
 
 ### **Coordinator**
 - Recibe los hiperparámetros (learning rate, epochs).
@@ -91,17 +90,16 @@ Luego un **coordinador** suma los gradientes parciales y actualiza los parámetr
 
 ---
 
-## 📊 **1.5 Diagrama 2 — Concurrencia (Secuencia)**
-
-👉 **Aquí debes pegar la imagen del DIAGRAMA 2**
+## **1.5 Diagrama 2 — Concurrencia (Secuencia)**
 
 ```
-[PEGA AQUÍ LA IMAGEN DEL DIAGRAMA 2]
+<img width="1400" height="685" alt="DIAGRAMA 2 — Concurrencia (Secuencia)" src="https://github.com/user-attachments/assets/2746b64e-a0ee-477a-a20b-6bf2c362bdb4" />
+
 ```
 
 ---
 
-## 🧩 **1.6 Explicación del Diagrama**
+## **1.6 Explicación del Diagrama**
 
 1. **Coordinator inicia epoch.**
 2. Solicita al Data Splitter dividir los datos.
@@ -114,12 +112,12 @@ Luego un **coordinador** suma los gradientes parciales y actualiza los parámetr
 
 ---
 
-# ✨ Punto 2 — Diseño usando AOP (Aspect-Oriented Programming)  
+# Punto 2 — Diseño usando AOP (Aspect-Oriented Programming)  
 *(Diseño, no implementación)*
 
 ---
 
-## 📌 **2.1 Diseño General AOP**
+## **2.1 Diseño General AOP**
 
 El objetivo es **separar la lógica principal** (entrenar la regresión lineal) de las *preocupaciones transversales*, como:
 
@@ -133,7 +131,7 @@ En AOP, estas funcionalidades se implementan mediante *Aspectos* que se “inyec
 
 ---
 
-## 📦 **2.2 Componentes del Diseño AOP**
+## **2.2 Componentes del Diseño AOP**
 
 ### **Core Model**
 - Contiene solo la lógica matemática de regresión lineal.
@@ -153,17 +151,16 @@ En AOP, estas funcionalidades se implementan mediante *Aspectos* que se “inyec
 
 ---
 
-## 📊 **2.3 Diagrama 3 — AOP (Componentes)**
-
-👉 **Aquí debes pegar la imagen GENERADA del DIAGRAMA 3**
+## **2.3 Diagrama 3 — AOP (Componentes)**
 
 ```
-[PEGA AQUÍ LA IMAGEN DEL DIAGRAMA 3]
+<img width="881" height="581" alt="DIAGRAMA 3 — AOP (Componentes)" src="https://github.com/user-attachments/assets/fc3f4157-5f4f-460a-adc1-79c5068b0994" />
+
 ```
 
 ---
 
-## 🧩 **2.4 Explicación del Diagrama**
+## **2.4 Explicación del Diagrama**
 
 ### **Core Model**
 - Mantiene únicamente:
@@ -182,17 +179,16 @@ En AOP, estas funcionalidades se implementan mediante *Aspectos* que se “inyec
 
 ---
 
-## 📊 **2.5 Diagrama 4 — AOP (Secuencia)**
-
-👉 **Aquí debes pegar la imagen GENERADA del DIAGRAMA 4**
+## **2.5 Diagrama 4 — AOP (Secuencia)**
 
 ```
-[PEGA AQUÍ LA IMAGEN DEL DIAGRAMA 4]
+<img width="1047" height="553" alt="DIAGRAMA 4 — AOP (Secuencia)" src="https://github.com/user-attachments/assets/2366f21e-d9c5-4295-a0bd-ba83f503758c" />
+
 ```
 
 ---
 
-## 🧩 **2.6 Explicación del Diagrama**
+## **2.6 Explicación del Diagrama**
 
 1. El usuario inicia el entrenamiento.  
 2. El *Aspect Weaving Engine* intercepta la llamada y activa:
@@ -208,25 +204,21 @@ En AOP, estas funcionalidades se implementan mediante *Aspectos* que se “inyec
 
 ---
 
-# ✨ Punto 3 — Implementación en Rust + Comparación con Python
+# Punto 3 — Implementación en Rust + Comparación con Python
 
 ---
 
-## 📌 **3.1 Implementación en Rust**
+## **3.1 Implementación en Rust**
 
 El archivo final del código se llama:
 
-👉 **`regresion_lineal.rs`**
-
-y debe subirse directamente en tu repositorio.
-
-Inclúyelo junto al README.
+**`regresion_lineal.rs`**
 
 ---
 
-## 📊 **3.2 Comparación de Desempeño entre Python y Rust**
+## **3.2 Comparación de Desempeño entre Python y Rust**
 
-### ⚡ Tiempo de ejecución estimado (1000 epochs, dataset simple)
+### Tiempo de ejecución estimado (1000 epochs, dataset simple)
 
 | Lenguaje | Tiempo estimado | Motivo |
 |---------|-----------------|--------|
@@ -235,7 +227,7 @@ Inclúyelo junto al README.
 
 ---
 
-### 🧠 Uso de CPU
+### Uso de CPU
 
 | Lenguaje | CPU | Descripción |
 |---------|-----|-------------|
@@ -244,7 +236,7 @@ Inclúyelo junto al README.
 
 ---
 
-### 🧵 Uso de memoria
+### Uso de memoria
 
 | Lenguaje | Memoria | Razón |
 |---------|---------|-------|
@@ -253,7 +245,7 @@ Inclúyelo junto al README.
 
 ---
 
-## ⭐ Ventajas comparativas
+## Ventajas comparativas
 
 | Criterio | Python | Rust |
 |---------|--------|------|
@@ -265,7 +257,7 @@ Inclúyelo junto al README.
 
 ---
 
-# 📌 Conclusiones Finales
+# Conclusiones Finales
 
 1. El paradigma de concurrencia permite acelerar el proceso mediante paralelización del cálculo de gradientes.  
 2. El paradigma AOP separa preocupaciones, permitiendo un código más limpio y modular.  
@@ -274,42 +266,3 @@ Inclúyelo junto al README.
 
 ---
 
-# 📁 Estructura recomendada del repositorio
-
-```
-/README.md
-/diagramas/
-   diagrama1_concurrencia_componentes.png
-   diagrama2_concurrencia_secuencia.png
-   diagrama3_aop_componentes.png
-   diagrama4_aop_secuencia.png
-/regresion_lineal.rs
-```
-
----
-
-# 🖼️ Secciones para pegar las imágenes (obligatorio)
-
-## Diagrama 1 — Concurrencia (Componentes)
-```
-[PEGA AQUÍ]
-```
-
-## Diagrama 2 — Concurrencia (Secuencia)
-```
-[PEGA AQUÍ]
-```
-
-## Diagrama 3 — AOP (Componentes)
-```
-[PEGA AQUÍ]
-```
-
-## Diagrama 4 — AOP (Secuencia)
-```
-[PEGA AQUÍ]
-```
-
----
-
-Si deseas que el README incluya color, emojis adicionales o una versión más formal, puedo generarlo también.
